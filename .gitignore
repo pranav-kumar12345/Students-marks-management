@@ -1,0 +1,16 @@
+# Generated Excel file
+Students.xlsx
+
+# Maven generated files
+target/
+
+# Eclipse generated files
+.settings/
+.classpath
+.project
+
+# Selenium test output
+test-output/
+
+# Java compiled files
+*.class
