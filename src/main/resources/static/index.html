@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Marks Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-header">
+
+    <div class="brand">
+
+        <div class="brand-mark">
+            SM
+        </div>
+
+        <div>
+            <h1>Student Marks</h1>
+            <p><em>Management System</em></p>
+        </div>
+
+    </div>
+
+    <div class="header-info">
+
+        <span class="system-status">
+            <span class="status-dot"></span>
+            System Ready
+        </span>
+
+    </div>
+
+</header>
+
+
+<main class="main-container">
+
+    <!-- NOTIFICATION -->
+
+    <div id="notification" class="notification hidden">
+
+        <span id="notificationIcon">✓</span>
+
+        <span id="notificationMessage"></span>
+
+    </div>
+
+
+    <!-- INTRO -->
+
+    <section class="intro-section">
+
+        <div>
+
+            <p class="section-label">
+                ACADEMIC RECORDS
+            </p>
+
+            <h2>
+                Manage
+                <span>student performance</span>
+                with ease.
+            </h2>
+
+            <p class="intro-text">
+                Add students, record subject marks and review
+                their academic performance from one place.
+            </p>
+
+        </div>
+
+
+        <div class="student-count-box">
+
+            <span class="count-label">
+                STUDENTS ADDED
+            </span>
+
+            <strong id="studentCount">
+                0
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORKSPACE -->
+
+    <section class="workspace">
+
+
+        <!-- ============================= -->
+        <!-- ADD STUDENT FORM -->
+        <!-- ============================= -->
+
+        <div class="form-panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <p class="panel-label">
+                        NEW RECORD
+                    </p>
+
+                    <h3>
+                        Add Student
+                    </h3>
+
+                </div>
+
+                <span class="panel-number">
+                    01
+                </span>
+
+            </div>
+
+
+            <!-- STUDENT ID -->
+
+            <div class="form-group">
+
+                <label for="studentId">
+                    Student ID
+                </label>
+
+                <input
+                    type="number"
+                    id="studentId"
+                    placeholder="Enter student ID"
+                    min="1"
+                >
+
+            </div>
+
+
+            <!-- STUDENT NAME -->
+
+            <div class="form-group">
+
+                <label for="studentName">
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter student's full name"
+                >
+
+            </div>
+
+
+            <!-- TEST NAME -->
+
+            <div class="form-group">
+
+                <label for="testName">
+                    Test Name
+                </label>
+
+                <input
+                    type="text"
+                    id="testName"
+                    placeholder="Enter test name"
+                >
+
+            </div>
+
+
+            <!-- MAXIMUM MARKS -->
+
+            <div class="form-group">
+
+                <label for="maximumMarks">
+                    Maximum Marks Per Subject
+                </label>
+
+                <select id="maximumMarks">
+
+                    <option value="">
+                        Select maximum marks
+                    </option>
+
+                    <option value="25">
+                        25 Marks
+                    </option>
+
+                    <option value="50">
+                        50 Marks
+                    </option>
+
+                    <option value="75">
+                        75 Marks
+                    </option>
+
+                    <option value="100">
+                        100 Marks
+                    </option>
+
+                </select>
+
+                <p class="input-help">
+                    This maximum applies to all 6 subjects.
+                </p>
+
+            </div>
+
+
+            <!-- SUBJECT HEADING -->
+
+            <div class="marks-heading">
+
+                <div>
+
+                    <p class="panel-label">
+                        SUBJECT RECORD
+                    </p>
+
+                    <h4>
+                        Enter Marks
+                    </h4>
+
+                </div>
+
+                <span>
+                    6 Subjects
+                </span>
+
+            </div>
+
+
+            <!-- SUBJECT MARKS -->
+
+            <div class="marks-grid">
+
+
+                <!-- TELUGU -->
+
+                <div class="form-group">
+
+                    <label for="telugu">
+                        Telugu
+                    </label>
+
+                    <input
+                        type="number"
+                        id="telugu"
+                        placeholder="0"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <!-- HINDI -->
+
+                <div class="form-group">
+
+                    <label for="hindi">
+                        Hindi
+                    </label>
+
+                    <input
+                        type="number"
+                        id="hindi"
+                        placeholder="0"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <!-- ENGLISH -->
+
+                <div class="form-group">
+
+                    <label for="english">
+                        English
+                    </label>
+
+                    <input
+                        type="number"
+                        id="english"
+                        placeholder="0"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <!-- MATHS -->
+
+                <div class="form-group">
+
+                    <label for="maths">
+                        Maths
+                    </label>
+
+                    <input
+                        type="number"
+                        id="maths"
+                        placeholder="0"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <!-- SCIENCE -->
+
+                <div class="form-group">
+
+                    <label for="science">
+                        Science
+                    </label>
+
+                    <input
+                        type="number"
+                        id="science"
+                        placeholder="0"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <!-- SOCIAL -->
+
+                <div class="form-group">
+
+                    <label for="social">
+                        Social
+                    </label>
+
+                    <input
+                        type="number"
+                        id="social"
+                        placeholder="0"
+                        min="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    id="clearBtn"
+                    class="secondary-btn"
+                >
+                    Clear
+                </button>
+
+                <button
+                    type="button"
+                    id="addStudentBtn"
+                    class="primary-btn"
+                >
+                    Add Student
+                </button>
+
+            </div>
+
+
+            <p class="form-note">
+                Add all students for the selected test,
+                then save them to the database.
+            </p>
+
+        </div>
+
+		
+		
+
+        <!-- ============================= -->
+        <!-- STUDENT LIST -->
+        <!-- ============================= -->
+
+        <div class="table-panel">
+
+			
+			<!-- ============================= -->
+			<!-- SEARCH STUDENT -->
+			<!-- ============================= -->
+
+			<div class="search-section">
+
+			    <div class="panel-heading">
+			        <div>
+			            <p class="panel-label">
+			                FIND RECORD
+			            </p>
+
+			            <h3>
+			                Search Student
+			            </h3>
+			        </div>
+
+			        <span class="panel-number">
+			            03
+			        </span>
+			    </div>
+
+
+			    <div class="form-row">
+
+			        <div class="form-group">
+
+			            <label for="searchStudentId">
+			                Student ID
+			            </label>
+
+			            <input
+			                type="number"
+			                id="searchStudentId"
+			                placeholder="Enter student ID"
+			                min="1"
+			            >
+
+			        </div>
+
+
+			        <div class="form-actions">
+
+			            <button
+			                type="button"
+			                id="searchStudentBtn"
+			                class="primary-btn"
+			            >
+			                Search
+			            </button>
+
+			            <button
+			                type="button"
+			                id="clearSearchBtn"
+			                class="secondary-btn"
+			            >
+			                Clear
+			            </button>
+
+			        </div>
+
+			    </div>
+
+
+			    <!-- SEARCH RESULTS -->
+
+			    <div
+			        id="searchResults"
+			        class="table-container hidden"
+			    >
+
+			        <div class="search-results-heading">
+
+			            <p class="panel-label">
+			                SEARCH RESULTS
+			            </p>
+
+			        </div>
+
+
+			        <table>
+
+			            <thead>
+
+			                <tr>
+
+			                    <th>Test</th>
+
+			                    <th>Max / Subject</th>
+
+			                    <th>Telugu</th>
+
+			                    <th>Hindi</th>
+
+			                    <th>English</th>
+
+			                    <th>Maths</th>
+
+			                    <th>Science</th>
+
+			                    <th>Social</th>
+
+			                    <th>Total</th>
+
+			                    <th>Average</th>
+
+			                    <th>Percentage</th>
+
+			                    <th>Action</th>
+
+			                </tr>
+
+			            </thead>
+
+
+			            <tbody id="searchResultsBody">
+
+			            </tbody>
+
+			        </table>
+
+			    </div>
+
+			</div>
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <p class="panel-label">
+                        RECORDS
+                    </p>
+
+                    <h3>
+                        Student List
+                    </h3>
+
+                </div>
+
+                <span class="panel-number">
+                    02
+                </span>
+
+            </div>
+
+
+            <!-- EMPTY MESSAGE -->
+
+            <div
+                id="emptyMessage"
+                class="empty-message"
+            >
+
+                <div class="empty-icon">
+                    +
+                </div>
+
+                <h4>
+                    No students added yet
+                </h4>
+
+                <p>
+                    Fill in the form and click
+                    <strong>Add Student</strong>
+                    to create your first record.
+                </p>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div
+                id="tableContainer"
+                class="table-container hidden"
+            >
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Test</th>
+
+                            <th>ID</th>
+
+                            <th>Student</th>
+
+                            <th>Max / Subject</th>
+
+                            <th>Telugu</th>
+
+                            <th>Hindi</th>
+
+                            <th>English</th>
+
+                            <th>Maths</th>
+
+                            <th>Science</th>
+
+                            <th>Social</th>
+
+                            <th>Total</th>
+
+                            <th>Average</th>
+
+                            <th>Percentage</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="studentTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- SAVE SECTION -->
+
+            <div
+                id="saveSection"
+                class="save-section hidden"
+            >
+
+                <div>
+
+                    <strong>
+                        Ready to submit?
+                    </strong>
+
+                    <p>
+                        The test, students and marks
+                        will be saved to MySQL.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="saveStudentsBtn"
+                    class="save-btn"
+                >
+                    Save All Students
+                </button>
+
+            </div>
+			
+			<div class="report-actions">
+
+							    
+
+							   <button
+							        type="button"
+							        id="downloadExcelBtn"
+							        class="primary-btn"
+							    >
+							        Download Excel
+							    </button>
+
+							</div>
+
+        </div>
+		
+		
+
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+
+        Student Marks Management System
+
+        <span>•</span>
+
+        <em>
+            Academic Record Management
+        </em>
+
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
