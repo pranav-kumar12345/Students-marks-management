@@ -1,0 +1,33 @@
+
+# Git metadata
+.git/
+.gitignore
+.gitattributes
+
+# Eclipse configuration
+.classpath
+.project
+.settings/
+
+# Generated Java files
+bin/
+target/
+
+# Old project files
+src_old/
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
